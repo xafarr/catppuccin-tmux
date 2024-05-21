@@ -89,6 +89,10 @@ build_window_format() {
     final_window_format="$show_left_separator$show_number$show_middle_separator$show_text$show_right_separator"
   fi
 
+  if [ "$window_number_position" = "none" ]; then
+    final_window_format="$show_left_separator$show_text$show_right_separator"
+  fi
+
   echo "$final_window_format"
 }
 
